@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Times</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Telegram Web Apps SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div id="app" class="container">
+        <header class="header">
+            <img src="icon.png" alt="App icon" class="logo">
+            <h1 class="title">Prayer Times</h1>
+        </header>
+        <section class="settings">
+            <label for="method">Calculation Method:</label>
+            <select id="method">
+                <option value="ISNA">ISNA</option>
+                <option value="MWL">MWL</option>
+                <option value="UMM_AL_QURA" selected>Umm al‑Qura</option>
+                <option value="EGYPT">Egypt</option>
+                <option value="MOONSIGHTING">Moonsighting</option>
+            </select>
+        </section>
+        <section class="times">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prayer</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody id="timesTable"></tbody>
+            </table>
+        </section>
+        <section class="next">
+            <h2>Next Prayer: <span id="nextPrayer">—</span></h2>
+            <p id="countdown">--:--:--</p>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
